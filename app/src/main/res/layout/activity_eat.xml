@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/wheel_light_blue"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue_font"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/back_key"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_back_selector" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="点单"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/blue_font"
+        android:orientation="horizontal" >
+
+
+        <ImageView
+
+            android:id="@+id/choose_item_img_icon"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/choose_item_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="title"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.example.lidotk.menu.View.starbar
+                android:id="@+id/choose_item_star"
+                android:layout_below="@+id/display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ratingbar:starEmpty="@drawable/star_empty"
+                ratingbar:starFill="@drawable/star_full"
+                ratingbar:starDistance="5dp"
+                ratingbar:starCount="5"
+                ratingbar:starSize="15dp"/>
+
+            <TextView
+                android:id="@+id/choose_item_des"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="des"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/discount_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/group_rb"
+                android:layout_width="@dimen/dimen_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_6_dp"
+                android:paddingTop="@dimen/dimen_6_dp"
+                android:text="菜单"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_14_dp" />
+
+            <RadioButton
+                android:id="@+id/preferential_rb"
+                android:layout_width="@dimen/dimen_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_6_dp"
+                android:paddingTop="@dimen/dimen_6_dp"
+                android:text="@string/evaluate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_14_dp" />
+
+
+            <RadioButton
+                android:id="@+id/coupon_rb"
+                android:layout_width="@dimen/dimen_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dimen_6_dp"
+                android:paddingTop="@dimen/dimen_6_dp"
+                android:text="动态"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_14_dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="4dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/group_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue_font" />
+
+        <View
+            android:id="@+id/preferential_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue_font"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/coupon_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue_font"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/pager"
+        android:background="@color/wheel_light_blue"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">menu</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="settlement">去结算</string>
+    <string name="shopping_cart">购物车</string>
+    <string name="service_products">服务产品</string>
+    <string name="business">选座</string>
+    <string name="evaluate">评价</string>
+</resources>

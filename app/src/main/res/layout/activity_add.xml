@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:background="@color/wheel_light_blue"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_action"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/blue_font"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_back_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="评价"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/btn_true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_true_selector" />
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:text="电话"
+        android:textColor="@color/user_center_black_text"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:layout_margin="10dp"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:background="@drawable/input_bg"
+        />
+
+    <EditText
+        android:id="@+id/edit_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="0.20"
+        android:background="@drawable/input_bg"
+        android:minHeight="@dimen/_10dp"
+        android:paddingLeft="10dp"
+        android:text="内容"
+        android:textColor="@color/user_center_black_text" />
+
+    <TextView
+        android:layout_width="@dimen/dimen_80_dp"
+        android:layout_height="@dimen/dimen_30_dp"
+        android:text="请打分"
+        android:textSize="@dimen/dimen_20_dp"
+        android:textColor="@color/user_center_black_text"/>
+
+    <com.example.lidotk.menu.View.starbar
+        android:id="@+id/edit_star"
+        android:layout_below="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ratingbar:starEmpty="@drawable/star_empty"
+        ratingbar:starFill="@drawable/star_full"
+        ratingbar:starDistance="5dp"
+        ratingbar:starCount="5"
+        ratingbar:starSize="30dp"/>
+
+</LinearLayout>

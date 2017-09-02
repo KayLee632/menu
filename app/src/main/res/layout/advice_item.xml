@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="@drawable/input_bg"
+    android:orientation="vertical">
+
+    <com.example.lidotk.menu.View.starbar
+        android:id="@+id/tv_star"
+        android:layout_below="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ratingbar:starEmpty="@drawable/star_empty"
+        ratingbar:starFill="@drawable/star_full"
+        ratingbar:starDistance="5dp"
+        ratingbar:starCount="5"
+        ratingbar:starSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_marginTop="10dp"
+        android:text="周三早上丢失了红色钱包，在食堂二楼"
+        android:textColor="#6b717b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_star"
+        android:minLines="1"
+        android:textSize="16sp"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_marginTop="10dp"
+        android:text="20130240122"
+        android:textColor="#6b717b"
+        android:textSize="12sp"
+        android:layout_below="@id/tv_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <ImageView android:id="@+id/tv_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:textSize="12sp"
+        android:paddingBottom="3dp"
+        android:drawablePadding="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_describe"
+        android:background="@color/green"
+        android:text="138024249542"
+        android:textColor="#ffff"
+        android:drawableLeft="@drawable/icon_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+</RelativeLayout>
